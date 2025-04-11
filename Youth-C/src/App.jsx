@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
+import Events from './Events';
 import './App.css';
+import SignIn from './SignIn';
 
 function App() {
   return (
@@ -16,14 +18,17 @@ function App() {
             <Link to="/events" className="nav-link">Events</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
             <Link to="/about" className="nav-link">About Us</Link>
-            <button className="join-button">Join</button>
+            <Link to="join">
+            <button className="join-button">Join</button></Link>
+            
           </div>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Home />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/about" element={<Home />} />
+          <Route path="/join" element={<SignIn />} />
         </Routes>
       </div>
     </Router>
