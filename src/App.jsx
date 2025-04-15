@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Events from './Events';
+import Contact from './Contact';
+import About from './About';
 import './App.css';
 import SignIn from './SignIn';
 
@@ -26,8 +28,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/contact" element={<Home />} />
-          <Route path="/about" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/join" element={<SignIn />} />
         </Routes>
       </div>
